@@ -1,4 +1,4 @@
-\include{preamble/preamble_ida12}				% Preamble indlaeses
+\input{../preamble/preamble_ida12}				% Preamble indlaeses
 \raggedbottom									% Soerger for at LaTeX ikke "straekker" teksten
 
 
@@ -13,7 +13,10 @@
 \include{Kapitler/Pre_ToC/pre_ToC}
 \cleardoublepage
 
-
+%Revision history and glossary comes before table of contents
+\include{Kapitler/frontpage/frontpage}
+\include{Kapitler/revision/revision}
+\include{Kapitler/glossary/glossary}
 
 %%%% Indholdsfortegnelse (TOC) %%%%
 \phantomsection									% Kunstigt afsnit, som hyperlinks kan 'holde fast i'

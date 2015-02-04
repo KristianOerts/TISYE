@@ -1,4 +1,4 @@
-\include{preamble/preamble_ida12}				% Preamble indlaeses
+\input{../preamble/preamble_ida12}				% Preamble indlaeses
 \raggedbottom									% Soerger for at LaTeX ikke "straekker" teksten
 
 
@@ -13,6 +13,10 @@
 \include{Kapitler/Pre_ToC/pre_ToC}
 \cleardoublepage
 
+%Revision history and glossary comes before table of contents
+\include{Kapitler/frontpage/frontpage}
+\include{Kapitler/revision/revision}
+\include{Kapitler/glossary/glossary}
 
 
 %%%% Indholdsfortegnelse (TOC) %%%%
@@ -24,6 +28,9 @@
 \mainmatter										% Hovedindhold - nummereres fra side 1
 
 \include{Kapitler/Introduction/Introduktion}
+\include{Kapitler/problem/problem}
+\include{Kapitler/need/need}
+\include{Kapitler/user/user}
 \include{Kapitler/Capability_Need/Capability_Need}
 \include{Kapitler/Operations_and_Support_Description/Operations_and_Support_Description}
 \include{Kapitler/Functional_Capabilities/Functional_Capabilities}

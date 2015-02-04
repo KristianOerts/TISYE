@@ -4,7 +4,7 @@
 
 % ¤¤ Oversaettelse og tegnsaetning ¤¤ %
 \usepackage[utf8]{inputenc}					% Input-indkodning af tegnsaet (UTF8)
-\usepackage[danish]{babel}					% Dokumentets sprog
+\usepackage[english]{babel}					% Dokumentets sprog
 \usepackage[T1]{fontenc}					% Output-indkodning af tegnsaet (T1)
 \usepackage{ragged2e,anyfontsize}			% Justering af elementer
 \usepackage{fixltx2e}						% Retter forskellige fejl i LaTeX-kernen
@@ -40,7 +40,7 @@
 \sisetup{locale=DE}							% Opsaetning af \SI (DE for komma som decimalseparator) 
 
 % ¤¤ Referencer og kilder ¤¤ %
-\usepackage[danish]{varioref}				% Muliggoer bl.a. krydshenvisninger med sidetal (\vref)
+\usepackage[english]{varioref}				% Muliggoer bl.a. krydshenvisninger med sidetal (\vref)
 \usepackage{natbib}							% Udvidelse med naturvidenskabelige citationsmodeller
 \usepackage{xr-hyper}							% Referencer til eksternt dokument med \externaldocument{<NAVN>}
 \externaldocument[DokRap-]{../Dokumentationsrapport/Dokumentationsrapport}	% Muliggør eksterne referencer til produktrapporten
@@ -56,7 +56,7 @@
 \pretolerance=2500 							% Justering af afstand mellem ord (hoejt tal, mindre orddeling og mere luft mellem ord)
 
 % Kommentarer og rettelser med \fxnote. Med 'final' i stedet for 'draft' udloeser hver note en error i den faerdige rapport.
-\usepackage[footnote,draft,danish,silent,nomargin]{fixme}		
+\usepackage[footnote,draft,english,silent,nomargin]{fixme}		
 
 
 %%%% CUSTOM SETTINGS %%%%
@@ -112,7 +112,7 @@
 \setlength{\belowcaptionskip}{-12pt}			% Afstand under figurteksten
 		
 % ¤¤ Navngivning ¤¤ %
-\addto\captionsdanish{
+\addto\captionsenglish{
 	\renewcommand\appendixname{Appendiks}
 	\renewcommand\contentsname{Indholdsfortegnelse}	
 	\renewcommand\appendixpagename{Appendiks}
@@ -262,3 +262,67 @@
   morekeywords={*,...},              % if you want to add more keywords to the set
   deletekeywords={...}              % if you want to delete keywords from the given language
 }
+
+
+
+
+
+%%Frontpage(Jens Kuhr)
+% ¤¤ Pæn opsætning af titelblad-dele ¤¤ %
+% ¤¤ Husk at ændre dato i senere projekter ¤¤ %
+\newcommand{\titelbladstuderende}[2]{
+\begin{tabular}[ht]{x{7cm}x{7cm}}
+\textbf{Name: } #1		&\textbf{Mail: } #2	\tn
+%\textbf{Date: } 09-02-2015	\tn
+%\multicolumn{2}{l}{\textbf{Underskrift: }\line(1,0){340}} %Linje til underskrift
+\end{tabular}
+}
+
+% ¤¤ Pæn opsætning af titelblad-dele ¤¤ %
+% ¤¤ Husk at ændre dato i senere projekter ¤¤ %
+\newcommand{\titelbladvejleder}[2]{
+\begin{tabular}[ht]{x{7cm}x{7cm}}
+\textbf{Name: } #1		&\textbf{Mail: } #2	\tn
+\textbf{Date: } 09-02-2015	\tn
+%\multicolumn{1}{l}{\textbf{Underskrift: }\line(1,0){340}} %Linje til underskrift
+\end{tabular}
+}
+
+%Hidden subsection
+\newcommand{\hiddensubsection}[1]{
+    \stepcounter{subsection}
+    \subsection{\arabic{chapter}.\arabic{section}.\arabic{subsection}\hspace{1em}{#1}}
+}
+
+% ------------------------------------------------------------------------------
+% LaTeX Template: Titlepage
+% This is a title page template which be used for both articles and reports.
+%
+% Copyright: http://www.howtotex.com/
+% Date: April 2011
+% ------------------------------------------------------------------------------
+% -------------------------------------------------------------------------------
+% Preamble
+% -------------------------------------------------------------------------------
+
+
+\usepackage[protrusion=true,expansion=true]{microtype}	
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{graphicx}
+
+% ------------------------------------------------------------------------------
+% Definitions (do not change this)
+% ------------------------------------------------------------------------------
+\newcommand{\HRule}[1]{\rule{\linewidth}{#1}} 	% Horizontal rule
+
+\makeatletter							% Title
+\def\printtitle{%						
+    {\centering \@title\par}}
+\makeatother									
+
+\makeatletter							% Author
+\def\printauthor{%					
+    {\centering \large \@author}}				
+\makeatother							
+
+% ------------------------------------------------------------------------------

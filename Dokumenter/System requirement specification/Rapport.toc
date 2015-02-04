@@ -1,4 +1,5 @@
-\select@language {danish}
+\changetocdepth {2}
+\select@language {english}
 \contentsline {chapter}{\chapternumberline {1}Scope}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Identification}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}System overview}{1}{section.1.2}
