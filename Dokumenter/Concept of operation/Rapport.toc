@@ -4,8 +4,7 @@
 \contentsline {chapter}{\chapternumberline {2}Problems}{2}{chapter.2}
 \contentsline {chapter}{\chapternumberline {3}Needs}{3}{chapter.3}
 \contentsline {chapter}{\chapternumberline {4}Operations and Support Description}{4}{chapter.4}
-\contentsline {section}{\numberline {4.1}Missions}{4}{section.4.1}
-\contentsline {section}{\numberline {4.2}Users and other stakeholders}{4}{section.4.2}
-\contentsline {section}{\numberline {4.3}Operation Description}{5}{section.4.3}
+\contentsline {section}{\numberline {4.1}Users and other stakeholders}{4}{section.4.1}
+\contentsline {section}{\numberline {4.2}Missions}{4}{section.4.2}
+\contentsline {section}{\numberline {4.3}Operation Description}{4}{section.4.3}
 \contentsline {section}{\numberline {4.4}Support and Warranty}{5}{section.4.4}
-\contentsline {chapter}{\chapternumberline {5}Economy}{6}{chapter.5}

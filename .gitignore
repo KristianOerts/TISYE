@@ -11,3 +11,7 @@ Dokumenter/Concept of operation/Rapport.pdf
 *.aux
 *.aux
 Dokumenter/Concept of operation/Rapport.aux
+*.aux
+*.gz
+*.toc
+*.out
