@@ -1,3 +1,5 @@
 *.gz
 *.log
 Dokumenter/System requirement specification/Rapport.pdf
+*.aux
+*.aux
