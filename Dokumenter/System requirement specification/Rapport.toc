@@ -12,4 +12,3 @@
 \contentsline {chapter}{\chapternumberline {4}Quality provisions}{4}{chapter.4}
 \contentsline {chapter}{\chapternumberline {5}Requirements traceability}{5}{chapter.5}
 \contentsline {section}{\numberline {5.1}Traceability matrix}{5}{section.5.1}
-\contentsline {chapter}{\chapternumberline {6}Other}{6}{chapter.6}
