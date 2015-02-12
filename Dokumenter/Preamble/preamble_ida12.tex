@@ -1,4 +1,4 @@
-\documentclass[a4paper,11pt,fleqn,dvipsnames,openany]{memoir} 	% Openright aabner kapitler paa hoejresider (openany begge)
+\documentclass[a4paper,11pt,fleqn,dvipsnames,twoside]{memoir} 	% Openright aabner kapitler paa hoejresider (openany begge)
 %\documentclass[a4paper,11pt,fleqn,dvipsnames,twoside,openright]{memoir} 	% Openright aabner kapitler paa hoejresider (openany begge)
 
 
@@ -279,7 +279,7 @@
 \nouppercaseheads											% Ingen Caps oenskes
 
 \makeevenhead{AAU}{TISYE - Company B}{}{\leftmark}				% Definerer lige siders sidehoved (\makeevenhead{Navn}{Venstre}{Center}{Hoejre})
-\makeoddhead{AAU}{\ref{doc:this} version \ref{ver:current}}{\rightmark}{Ingeniørhøjskolen Aarhus Universitet}		% Definerer ulige siders sidehoved (\makeoddhead{Navn}{Venstre}{Center}{Hoejre})
+\makeoddhead{AAU}{\ref{doc:this} \\ Version \ref{ver:current}}{}{Ingeniørhøjskolen Aarhus Universitet}		% Definerer ulige siders sidehoved (\makeoddhead{Navn}{Venstre}{Center}{Hoejre})
 \makeevenfoot{AAU}{\thepage}{}{}							% Definerer lige siders sidefod (\makeevenfoot{Navn}{Venstre}{Center}{Hoejre})
 \makeoddfoot{AAU}{}{}{\thepage}								% Definerer ulige siders sidefod (\makeoddfoot{Navn}{Venstre}{Center}{Hoejre})
 \makeheadrule{AAU}{\textwidth}{0.5pt}						% Tilfoejer en streg under sidehovedets indhold
