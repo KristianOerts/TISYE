@@ -17,13 +17,20 @@ In this section a short description of each system- and function-block is given.
 
 \textbf{System-blocks}
 \begin{enumerate}
-\item[•] \textbf{PC:} This block constitutes the machine in the head quarter (HQ) on which the COP-software will be executed. It also has a GPS, so that the location of the HQ is always known. The PC is to be connected to the internet, in order to be able to communicate with the rest of the system.
+\item[•] \textbf{PC:} This block constitutes the machine in the head quarter (HQ) on which the COP-software will be executed. It also has a GPS module, so that the location of the HQ is always known. The PC is to be connected to the internet, in order to be able to communicate with the rest of the system.
 \item[•] \textbf{Server:} The server will facilitate communication between the other blocks. In addition, it will store user information along with logs locally in an internal database.
 \item[•] \textbf{Log:} The log will contain log entries with information about previous events.
-\item[•] \textbf{User information:} 
+\item[•] \textbf{User information:} This block will contain information about the users of the system.
+\item[•] \textbf{Internal database:} The internal database will be responsible for storing the log and user information.
+\item[•] \textbf{External information database:} This block constitutes the source of static and dynamic information, that the COP will make available to the user.
+\item[•] \textbf{Dismounted COP:} This block constitutes the machine on which the condensed COP-software will be executed. The dismounted COP will be used by the dismounted users in the field. It has a GPS module, so that the location of the dismounted users is always known. Furthermore it has a GSM module so that it will be able to communicate with the rest of the system.
+\item[•] \textbf{Emergency organization:} These blocks constitute the platforms currently employed by the various emergency organizations using the system.
 \end{enumerate}
+
 
 \textbf{Function-blocks}
 \begin{enumerate}
-\item[•] \textbf{Encryption/decryption:} 
+\item[•] \textbf{Encryption/decryption:} These blocks will be responsible for encrypting outgoing data and decrypting incoming data in the communication between the various system blocks.
+\item[•] \textbf{Tracking:} This block constitutes all communication with GPS-satellites.
+\item[•] \textbf{Platform standardization:} This block is responsible for unifying all communication between the various emergency organizations using the system, and the COP/dismounted COP.
 \end{enumerate}
