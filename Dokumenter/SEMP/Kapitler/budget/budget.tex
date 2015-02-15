@@ -1,0 +1,91 @@
+\chapter{Budget}
+This chapter gives a detailed description of the budget for the system engineering process.
+It also shows a coarse estimation of how time should be spent in the different processes and how many people are allocated to perform the tasks.
+\\
+
+Table \ref{tab:UnitsOfMeasure} and \ref{tab:PriceOfPersonnel} show the values from which the estimated budget have been calculated.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|ll|}
+\hline
+\textbf{Unit} & \textbf{Hours / day} & \textbf{Days / week} \\ \hline
+Working hours & 8                    & -                    \\
+Working days  & -                    & 5                    \\ \hline
+\end{tabular}
+\caption{Units of measure}
+\label{tab:UnitsOfMeasure}
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Personnel}            & \textbf{Price (DKR) / day} \\ \hline
+Software developer (internal) & 4,000                      \\
+IT supporter                  & 3,000                      \\
+Guard call supplement         & 1,000                      \\ \hline
+\end{tabular}
+\caption{Price of personnel}
+\label{tab:PriceOfPersonnel}
+\end{table}
+
+Table \ref{tab:BudgetEstimation} shows the calculated estimations for the different phases of the system engineering process. The different phases are described in the section \ref{chap:phases}.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|lllll|}
+\hline
+\textbf{Phase} & \multicolumn{1}{c}{\textbf{Weeks}} & \textbf{Days} & \textbf{Personnel} & \textbf{Unit price (DKR)} & \textbf{Phase price (DKR)} \\ \hline
+1              & 17,2                               & 86            & 10                 & 4,000                     & 3,440,000                  \\
+2              & 35,2                               & 176           & 15                 & 4,000                     & 10,560,000                 \\
+4              & 13                                 & 65            & 20                 & 4,000                     & 5,200,000                  \\
+5              & 6,4                                & 32            & 40                 & 4,000                     & 5,120,000                  \\
+6              & 6,2                                & 31            & 20                 & 4,000                     & 2,480,000                  \\
+7              & 30                                 & 150           & 40                 & 4,000                     & 24,000,000                 \\
+8              & 21,8                               & 109           & 15                 & 4,000                     & 6,540,000                  \\
+9              & 521,8                              & 2609          & 3                  & 4,000                     & 31,308,000                 \\
+10.1           & 1043,6                             & 7305,2        & 2                  & 1,000                     & 14,610,400                 \\
+10.2           & 1043,6                             & 5218          & 2                  & 3,000                     & 31,308,000                 \\ \hline
+\end{tabular}
+\caption{Estimation of the budget for the system engineering process}
+\label{tab:BudgetEstimation}
+\end{table}
+
+\textbf{Notes for Table \ref{tab:BudgetEstimation}:} \\
+10.1 - Each person on guard duty is paid 1,000DKR in call supplement each day (24x7 plan). \\
+10.2 - Two guards on duty in a service center (24x7 plan).
+
+~\\
+
+Table \ref{tab:VolumeOfPhases} show how much the different phases cost when connected and their volumes. It gives an overview of in which phases the heaviest duties lie and where most money is spent.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|ll|}
+\hline
+\textbf{Phases} & \textbf{Price (DKR)} & \textbf{Volume (\%)} \\ \hline
+1-4             & 3,440,000                  & 37.80                \\
+5-6             & 10,560,000                 & 14.96                \\
+7               & 5,200,000                  & 47.24                \\
+8-9             & 5,120,000                  & 28.13                \\
+10              & 2,480,000                  & 34.12                \\ \hline
+\end{tabular}
+\caption{Volume of different connected phases}
+\label{tab:VolumeOfPhases}
+\end{table}
+
+Table \ref{tab:CostOfAllPhases} show the cost of all the phases both with and without the production phase. The cost of the production phase is also calculated.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Unit}          & \textbf{Price (DKR)} \\ \hline
+Total (w/o Production) & 50,800,000           \\
+Total (w/ Production)  & 134,566,400          \\
+Production             & 83,766,400           \\ \hline
+\end{tabular}
+\caption{Cost of all phases and production}
+\label{tab:CostOfAllPhases}
+\end{table}
