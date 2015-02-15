@@ -1,6 +1,9 @@
 \chapter{High Level Design Description}
 \label{high_level}
-This chapter gives an overview of the high level design. It includes a functional block diagram of the system, which partitions the design of the system into blocks, and depicts the interactions between the blocks. The diagram is shown in figure \ref{fig:func_block_diagram}:
+This chapter gives an overview of the high level design. It includes a functional block diagram of the system, which partitions the design of the system into blocks, and depicts the interactions between the blocks. Furthermore it gives an overview of the system states through a state machine diagram. 
+
+\subsection{Functional block diagram}
+The functional block diagram is shown in figure \ref{fig:func_block_diagram}:
 
 \begin{figure}[H]
 \centering
@@ -10,7 +13,7 @@ This chapter gives an overview of the high level design. It includes a functiona
 \label{fig:func_block_diagram}
 \end{figure}
 
-The diagram consists of system-blocks and function-blocks. The blocks are depicted as two-compartment blocks with the name of the block in the first compartment, and sub parts in the second compartment. The functions are blocks with a single compartment, containing the name of the function. The system-blocks are actual parts of the system, while the function-blocks are functions and actions that are carried out in the system. The data flow between the blocks are depicted with arrows, whose direction dictates the direction of the data flow. 
+The diagram consists of system-blocks and function-blocks. The system-blocks are depicted as two-compartment blocks with the name of the block in the first compartment, and sub parts in the second compartment. The functions are blocks with a single compartment, containing the name of the function. The system-blocks are actual parts of the system, while the function-blocks are functions and actions that are carried out in the system. The data flow between the blocks are depicted with arrows, whose direction dictates the direction of the data flow. 
 
 \subsubsection{Block description}
 In this section a short description of each system- and function-block is given.
@@ -34,3 +37,16 @@ In this section a short description of each system- and function-block is given.
 \item[•] \textbf{Tracking:} This block constitutes all communication with GPS-satellites.
 \item[•] \textbf{Platform standardization:} This block is responsible for unifying all communication between the various emergency organizations using the system, and the COP/dismounted COP.
 \end{enumerate}
+
+\subsection{State machine diagram}
+The the state machine diagram is shown in figure \ref{fig:state_diagram}:
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\textwidth]
+{billeder/state_machine_pdd.pdf}
+\caption{State machine diagram of the system.}
+\label{fig:state_diagram}
+\end{figure}
+
+In accordance with the System Requirement Specification, the system has four states: a start-up state, an active state, an error-state and a shut-down state. When in the active state, the system can operate in three different modes. If an error occurs anywhere in the start-up, active or shut-down state, the system will enter an error state, where the error can be remedied.
