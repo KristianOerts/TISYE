@@ -49,4 +49,4 @@ The the state machine diagram is shown in figure \ref{fig:state_diagram}:
 \label{fig:state_diagram}
 \end{figure}
 
-In accordance with the System Requirement Specification, the system has four states: a start-up state, an active state, an error-state and a shut-down state. When in the active state, the system can operate in three different modes. If an error occurs anywhere in the start-up, active or shut-down state, the system will enter an error state, where the error can be remedied.
+In accordance with the System Requirement Specification, the system has four states: a start-up state, an active state, an error-state and a shut-down state. During the start-up state the COP/dismounted COP are initialized, and connections to the internet and GPS are made. When in the active state, the COP is functional and the system can operate in three different modes. If an error occurs anywhere in the start-up, active or shut-down state, the system will enter an error state, where the error can be remedied. The system will not be fully functional when in the error state. 
