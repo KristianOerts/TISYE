@@ -1,5 +1,5 @@
 \section{Phases of work}
-In this section the different phases of the tendered will be elaborated. 
+In this section the different phases of the tendering will be elaborated. 
 
 \subsection*{Discovery}
 In this phase the contractor shall identify the needed hardware such as the best microprocessor-system, best battery option, materials for housing, hardware for telecommunications and available sensors on the market. 
@@ -16,12 +16,12 @@ During this phase extensive testing will be required. In the response proposal a
 
 \section{Development guidelines and requirements}
 \label{sec:guidelines_and_requirements}
-
+The following requirements encapsulates functionality regarding both software and hardware. Therefore you shall extract the appropriate information from the requirements below in order to design and develop an adequate hardware platform.
 
 \subsection{Capability requirements}
 \begin{description}
-\item[FR-0110] The system shall keep track of the location of all devices
-
+\item[FR-0111] The hand-held dismounted COP shall be able to get its current location.
+\item[FR-0112] The hand-held dismounted COP shall be able to notify the server with the current location. 
 \end{description}
 
 
@@ -58,7 +58,7 @@ levels.
 
 \subsection{Non-functional requirements}
 \begin{description}
-\item[NFR-0130] The location of a device shall be updated at least every 10 seconds (FR-0110).
+\item[NFR-0131] The location of a device shall able to be updated at least every 10 seconds (FR-0110).
 \item[NFR-0140] When the system provides COP-information to a device, the information must
 be available on the device within 10 seconds (FR-0115).
 \item[NFR-0170] Dangerous radiation levels are defined by measurements above 0.25 Sievert.
@@ -68,8 +68,6 @@ above 70 °C (FR-0352).
 atmosphere (FR-0354).
 \item[NFR-0200] The probability of data loss shall not exceed 1/1000 (FR-0450).
 \item[NFR.0210] The weight of the hand-held dismounted COP shall not exceed 1 kg (FR-0460).
-
-
 \end{description}
 
 
