@@ -17,6 +17,7 @@ The diagram consists of system-blocks along with parts associated to each block.
 \end{enumerate}
 \section{Concept of Execution}
 \section{Interface Design}
+
 This section seeks to describe the interface characteristics of the system components. It provides an internal block diagram (bdd) of the system, where the interfaces of the system components are identified, as long as the external interfaces of the system. The internal block diagram of the overall system is shown in figure \ref{fig:internal_block_diagram}:
 \begin{figure}[H]
 \centering
@@ -25,6 +26,44 @@ This section seeks to describe the interface characteristics of the system compo
 \caption{Internal block diagram of the system.}
 \label{fig:internal_block_diagram}
 \end{figure}
+
+
+\begin{table}[H]  
+\centering
+
+\begin{tabular}{|l|p{8cm}|l|l|} 
+\hline
+	\textbf{Name}		& \textbf{Description}						  & \textbf{Port 1} & \textbf{Port 2} \\\hline
+  Radiation DC				&  Radiation level to the dismounted COP 	 					   & SIT1 & DC6 \\\hline
+  Oxygen DC					&  Oxygen level signal to the dismounted COP				   & SIT2 & DC7 \\\hline
+  GPS DC					&  GPS signal for the dismounted COP 	 					   & SIT3 & DC1 \\\hline   
+  Temperature DC			&  Temperature signal to the dismounted COP 	 					   & SIT4 & DC2 \\\hline     
+  Audio in DC				&  Microphone for communication purposes 	 				   & SIT5 &\textbf{ DC8  FIX PÅ DIAGRAM!!!!!}\\\hline     
+  Audio out DC				&  Speaker for communication purposes 	 					   & SIT6 & DC3 \\\hline     
+  Display IO DC				&  Display input/output for dismounted COP 	 					   & SIT7 & DC5 \\\hline     
+  
+  GPS PC					&  GPS signal for the PC			 	 					   & SIT8 & PC1 \\\hline     
+  Audio in PC				&  Microphone for communication purposes 	 					   & SIT9 & PC3 \\\hline     
+  Audio out PC				&  Speaker for communication purposes 	 					   & SIT10 & PC5 \\\hline     
+  Display IO PC				&  Display input/output for PC 	 					   & SIT11 & PC7 \\\hline     
+  Keyboard PC				&  Keyboard input to the PC 	 					   & SIT12 & PC6 \\\hline     
+  Mouse in PC				&  Mouse input to the PC 	 					   & SIT13 & PC4 \\\hline    
+  Tele EID S				&  \textbf{MANGLER !!!} 					   & SIT14 & S2 \\\hline
+       
+  Tele DC					&  Telecommunication between the dismounted COP and the server & DC4 & S1 \\\hline   
+  Tele 						&  Telecommunication between the PC and the server 					   & PC2 & S2 \\\hline   
+   
+\end{tabular}
+\caption {General ibd} 
+%\label{} 
+\end{table} 
+
+
+
+
+
+
+
 \subsection{PC}
 In this section the internal interfaces of the PC to be used in this system are specified in greater detail. All the sub parts of the PC are connected to the processor which manages all logic operations and functions, while the telecommunication module enables the PC to communicate with the remaining system components. It is not within the scope of this project to develop the PC itself, however the COP is to be executed on the PC. Therefore the interfaces of the PC are identified, to ensure that the PC - and thereby the COP - can communicate with the rest of the system. The internal block diagram of the PC is shown in figure \ref{fig:internal_diagram_PC}:
 \begin{figure}[H]
@@ -34,6 +73,38 @@ In this section the internal interfaces of the PC to be used in this system are 
 \caption{Internal block diagram of the PC.}
 \label{fig:internal_diagram_PC}
 \end{figure}
+
+
+\begin{table}[H]  
+\centering
+
+\begin{tabular}{|l|p{8cm}|l|l|} 
+\hline
+	\textbf{Name}		& \textbf{Description} & \textbf{Port 1} & \textbf{Port 2} \\\hline
+GPS DC	    & Dismounted COP receiving GPS signal												 & G1 &  PC1 \\\hline
+Tele PC     & Telecommunication between the PC and the server							   		 & T1 &  PC2 \\\hline		
+Audio in PC & Microphone for communication purposes  											 & M2 &  PC3 \\\hline				  
+Mouse in PC	    & Input from the mouse										 					 & MO2 &  PC4\\\hline				  
+Audio out PC	        & Speaker for communication purposes 			  						 & SP2 & PC5 \\\hline			
+Keyboard in PC	& Input from the keyboard   				 				 					 & K2 &  PC6 \\\hline				  
+Display IO PC	& Input and output from user to the touch screen								 & TS2 &  PC7 \\\hline				  
+	
+GPS in P	& Signal from the GPS to the processor								                 & P1 & G2 \\\hline				  			
+Tele P		& Communication between the telecommunications module and the processor              & P2 & T2 \\\hline				  			
+TS P		& Communication between the touch screen module and the processor          			 & P3 & TS1 \\\hline			  			
+M in P		& Signal from the mouse to the processor          								     & P4 & MO1 \\\hline				  	
+K in P		& Signal from the keyboard to the processor          								 & P5 & K1 \\\hline				  			
+Audio in SP	& Signal from the processor to the speaker					             			 & P6 & SP1 \\\hline				  		Audio in P	& Signal from the microphone to the processor					           		     & P7 & M1 \\\hline				  			
+												   
+\end{tabular}
+\caption {Dismounted COP ibd} 
+%\label{} 
+\end{table} 
+
+
+
+
+
 When looking into the PC the different modules are displayed on the ibd. The connections between the modules describes the data flow. In the PC a processor is connecting all the units together, while the telecommunication module is connecting the PC to the other devices. The i/o from the microphone, speakers, touch screen, mouse and keyboard reaches to the physical world to connect with the user.
 \input{Kapitler/System_architectural_design/concept_of_execution.tex}
 
