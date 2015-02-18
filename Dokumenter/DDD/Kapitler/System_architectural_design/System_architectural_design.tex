@@ -25,6 +25,23 @@ The diagram consists of system-blocks along with parts associated to each block.
 \section{Concept of Execution}
 
 \section{Interface Design}
+This section seeks to describe the interface characteristics of the system components. It provides an internal block diagram (bdd) of the system, where the interfaces of the system components are identified, as long as the external interfaces of the system. The internal block diagram of the overall system is shown in figure \ref{fig:internal_block_diagram}:
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\textwidth]
+{billeder/ibd_overordnet.pdf}
+\caption{Internal block diagram of the system.}
+\label{fig:internal_block_diagram}
+\end{figure}
 
 \subsection{PC}
-When looking into the PC the different modules are displayed on the ibd. The connections between the modules describes the data flow. In the PC a processor is connecting all the units together, while the telecommunication module is connecting the PC to the other devices. The i/o from the microphone, speakers, touch screen, mouse and keyboard reaches to the physical world to connect with the user.
+In this section the internal interfaces of the PC to be used in this system are specified in greater detail. All the sub parts of the PC are connected to the processor which manages all logic operations and functions, while the telecommunication module enables the PC to communicate with the remaining system components. It is not within the scope of this project to develop the PC itself, however the COP is to be executed on the PC. Therefore the interfaces of the PC are identified, to ensure that the PC - and thereby the COP - can communicate with the rest of the system. The internal block diagram of the PC is shown in figure \ref{fig:internal_diagram_PC}:
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\textwidth]
+{billeder/ibd_PC.pdf}
+\caption{Internal block diagram of the PC.}
+\label{fig:internal_diagram_PC}
+\end{figure}
