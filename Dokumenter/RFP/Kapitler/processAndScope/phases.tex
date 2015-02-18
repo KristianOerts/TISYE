@@ -1,8 +1,8 @@
 \section{Phases of work}
-In this part it sought to express the content of the different phases in the tendered project. 
+In this section the different phases of the tendered will be elaborated. 
 
-\subsection*{Discovery phase}
-In this phase the contractor shall identify the needed hardware such as materials for housing, hardware for telecommunications and available sensors on the market. 
+\subsection*{Discovery}
+In this phase the contractor shall identify the needed hardware such as the best microprocessor-system, best battery option, materials for housing, hardware for telecommunications and available sensors on the market. 
 
 \subsection*{Design}
 The design phase will contain the design of the hand-held device. This shall include all interfaces and specific hardware design documents. 
@@ -12,11 +12,31 @@ If elected the contractor shall provide documentation according to a later speci
 The development and integration of the hand-held device is a joint operation between the contractor and Dunke Inc. The production will be the contractors responsibility including any hardware and OS specific tests. 
 
 \subsection*{Testing}
-During this phase extensive testing will be required. In the proposal an outline for these tests shall be quoted. 
+During this phase extensive testing will be required. In the response proposal an outline for these tests shall be quoted. 
 
 \section{Development guidelines and requirements}
-\subsection{Housing}
-\fxfatal{Tjek op på kravene}
+\label{sec:guidelines_and_requirements}
+
+
+\subsection{Capability requirements}
+\begin{description}
+\item[FR-0110] The system shall keep track of the location of all devices
+
+\end{description}
+
+
+\subsection{Safety requirements }
+\begin{description}
+\item[FR-0350] The hand-held dismounted COP shall warn the user about dangerous radiation
+levels.
+\item[ FR-0352] The hand-held dismounted COP shall warn the user about dangerous
+temperature levels.
+\item[FR-0354] The hand-held dismounted COP shall warn the user about dangerous oxygen
+levels.
+\end{description}
+ 
+ 
+\subsection{System environment requirements}
 \begin{description}
 \item[FR-0390] The hand-held dismounted COP shall be waterproof.
 \item[FR-0400] The hand-held dismounted COP shall be shock resistant.
@@ -24,13 +44,37 @@ During this phase extensive testing will be required. In the proposal an outline
 \item[FR-0420] The hand-held dismounted COP shall be cold resistant.
 \end{description}
 
-\subsection{Internal Hardware}
+\subsection{System quality factors}
 \begin{description}
-\item[??] ???? 
+\item[FR-0430] Warranty period shall be at least 10 years.
+\item[FR-0440] The system shall be open for future updates.
+\end{description}
+
+\subsection{Design and construction constraints}
+\begin{description}
+\item[FR-0460] The hand-held dismounted COP shall be wearable. 
+\item[FR-0470] The hand-held dismounted COP shall be worn so it is easily accessible.
+\end{description}
+
+\subsection{Non-functional requirements}
+\begin{description}
+\item[NFR-0130] The location of a device shall be updated at least every 10 seconds (FR-0110).
+\item[NFR-0140] When the system provides COP-information to a device, the information must
+be available on the device within 10 seconds (FR-0115).
+\item[NFR-0170] Dangerous radiation levels are defined by measurements above 0.25 Sievert.
+\item[NFR-0180] Dangerous temperature levels are defined by temperatures below -40 °C and
+above 70 °C (FR-0352).
+\item[NFR-0190] Dangerous oxygen levels are defined by oxygen levels below 10 % of the
+atmosphere (FR-0354).
+\item[NFR-0200] The probability of data loss shall not exceed 1/1000 (FR-0450).
+\item[NFR.0210] The weight of the hand-held dismounted COP shall not exceed 1 kg (FR-0460).
+
+
 \end{description}
 
 
-\subsection{Reporting during joint operations}
+
+\section{Reporting during joint operations}
 The contractor will be obliged to give regularly updates. Typically on a weekly basis or similar. It will be the forum for discussion of problems and solutions. 
 
 In the end of every phase the contractor shall provide documentation that summarizes the work conducted in the phase.
