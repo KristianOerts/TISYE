@@ -1,14 +1,14 @@
 \chapter{System-wide Design Decisions}
 
 In this chapter, the decision for the system-wide detailed design is made.
-\section{Hardware decisions}
-\textbf{The HQ} shall be a stationary post mounted in a mobile vehicle. It must be implemented on a well known hardware platform. The user interaction is supposed to be a mix between use of mouse, keyboard and touch screen. It must be possible to give all commands from here.\\
+\section{Parts Decisions}
+\textbf{The HQ} shall be a stationary post mounted in a mobile vehicle. The HQ shall be implemented on a PC. The user interaction is supposed to be a mix between use of mouse, keyboard and touch screen. It must be possible to give all commands from here. The PC must have a wireless internet connection. To process data the PC must have a processor.\\
 
-\textbf{The Dismounted COP} shall be mounted on the wrist of the user. Therefor the Dismounted COP must be within dimensions of 13x6x1 cm. It must be shock-, water- and heat resistant. The Dismounted COP must have a touch screen which can be used with or without gloves.
+\textbf{The Dismounted COP} shall be mounted on the wrist of the user. Therefor the Dismounted COP must be within dimensions of 13x6x1 cm. It must be shock-, water- and heat resistant. The Dismounted COP must have a touch screen which can be used with or without gloves. Furthermore the Dismounted COP must be able to alert the users about radiation, low oxygen levels and dangerous temperatures.\\
 
-%\textbf{A Server} shall
+\textbf{A Server} shall be used to distribute data between users. It must contain a database for storage of relevant information. The server must also be able to communicate with other SitaWare solutions.\\
 
-\section{Part descriptions}
+For reference purposes the decisions are listed below:
 \begin{description}
 \item[SDD-0100] The HQ shall be implemented on a PC.
 \item[SDD-0110] The PC shall have a Touch screen, to display relevant information and to make user interaction easy.
@@ -18,6 +18,7 @@ In this chapter, the decision for the system-wide detailed design is made.
 \item[SDD-0150] The PC shall have a Telecommunication module, to access the internet.
 \item[SDD-0160] The PC shall have a speaker, to enable audio communication.
 \item[SDD-0170] The PC shall have a microphone, to enable audio communication.
+\item[SDD-0180] The PC shall have a processor, to process data.
 \item[SDD-0200] The system shall have a Dismounted COP.
 \item[SDD-0210] The Dismounted COP shall have a GPS, to get the location of the Dismounted COP.
 \item[SDD-0220] The Dismounted COP shall have a Micro Controller, to process data.
@@ -26,6 +27,9 @@ In this chapter, the decision for the system-wide detailed design is made.
 \item[SDD-0250] The Dismounted COP shall have a speaker, to enable audio communication.
 \item[SDD-0260] The Dismounted COP shall have a microphone, to enable audio communication.
 \item[SDD-0270] The Dismounted COP shall have a battery, to be mobile.
+\item[SDD-0280] The Dismounted COP shall have a Radiation sensor to alert the user about radiation.
+\item[SDD-0290] The Dismounted COP shall have an Oxygen sensor to alert the user about low oxygen levels.
+\item[SDD-0299] The Dismounted COP shall have a Temperature sensor to alert the user about dangerous temperatures.
 \item[SDD-0300] The system shall have a Server to distribute data.
 \item[SDD-0310] The Server shall have a Database to store information.
 \end{description}
