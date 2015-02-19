@@ -15,7 +15,12 @@ The diagram consists of system-blocks along with parts associated to each block.
 \item[•] \textbf{Server:} The server will facilitate communication between the other blocks. In addition, it will store user information along with logs locally in an internal database.
 \item[•] \textbf{Dismounted COP:} This block constitutes the machine on which the condensed COP-software will be executed. The dismounted COP will be used by the dismounted users in the field. It has a GPS module, so that the location of the dismounted users is always known. Furthermore it has a telecommunication module so that it will be able to communicate with the rest of the system. 
 \end{enumerate}
+
+
 \section{Concept of Execution}
+\input{Kapitler/System_architectural_design/concept_of_execution.tex}
+
+
 \section{Interface Design}
 
 This section seeks to describe the interface characteristics of the system components. It provides an internal block diagram (bdd) of the system, where the interfaces of the system components are identified, as long as the external interfaces of the system. The internal block diagram of the overall system is shown in figure \ref{fig:internal_block_diagram}:
@@ -38,7 +43,7 @@ This section seeks to describe the interface characteristics of the system compo
   Oxygen DC					&  Oxygen level signal to the dismounted COP				   & SIT2 & DC7 \\\hline
   GPS DC					&  GPS signal for the dismounted COP 	 					   & SIT3 & DC1 \\\hline   
   Temperature DC			&  Temperature signal to the dismounted COP 	 					   & SIT4 & DC2 \\\hline     
-  Audio in DC				&  Microphone for communication purposes 	 				   & SIT5 &\textbf{ DC8  FIX PÅ DIAGRAM!!!!!}\\\hline     
+  Audio in DC				&  Microphone for communication purposes 	 				   & SIT5 &\fxfatal{DC8  FIX PÅ DIAGRAM!!!!!}\\\hline     
   Audio out DC				&  Speaker for communication purposes 	 					   & SIT6 & DC3 \\\hline     
   Display IO DC				&  Display input/output for dismounted COP 	 					   & SIT7 & DC5 \\\hline     
   
@@ -48,7 +53,7 @@ This section seeks to describe the interface characteristics of the system compo
   Display IO PC				&  Display input/output for PC 	 					   & SIT11 & PC7 \\\hline     
   Keyboard PC				&  Keyboard input to the PC 	 					   & SIT12 & PC6 \\\hline     
   Mouse in PC				&  Mouse input to the PC 	 					   & SIT13 & PC4 \\\hline    
-  Tele EID S				&  \textbf{MANGLER !!!} 					   & SIT14 & S2 \\\hline
+  Tele EID S				&  \fxfatal{MANGLER !!!} 					   & SIT14 & S2 \\\hline
        
   Tele DC					&  Telecommunication between the dismounted COP and the server & DC4 & S1 \\\hline   
   Tele 						&  Telecommunication between the PC and the server 					   & PC2 & S2 \\\hline   
@@ -57,9 +62,6 @@ This section seeks to describe the interface characteristics of the system compo
 \caption {General ibd} 
 %\label{} 
 \end{table} 
-
-
-
 
 
 
@@ -106,5 +108,5 @@ Audio in SP	& Signal from the processor to the speaker					             			 & P6
 
 
 When looking into the PC the different modules are displayed on the ibd. The connections between the modules describes the data flow. In the PC a processor is connecting all the units together, while the telecommunication module is connecting the PC to the other devices. The i/o from the microphone, speakers, touch screen, mouse and keyboard reaches to the physical world to connect with the user.
-\input{Kapitler/System_architectural_design/concept_of_execution.tex}
+
 
