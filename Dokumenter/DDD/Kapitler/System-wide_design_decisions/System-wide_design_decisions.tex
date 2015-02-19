@@ -6,7 +6,8 @@ In this chapter, the decision for the system-wide detailed design is made.
 The system shall get inputs from the various users, from sensors on the Dismounted COP and from external databases. The inputs from the user is registered either in the HQ or on the Dismounted COP. The external databases gives input to the Server, which distributes the data to the HQ and the Dismounted COP. The system gives outputs from the Server, the HQ and the Dismounted COP. 
 
 \section{Behavior Resulting from I/O}
-The Server shall receive and distribute data in the system according to the modes the users are using. The Dismounted COP shall 
+The Server shall receive and distribute data in the system according to the modes the users are using. The Server also distributes system updates. The Dismounted COP shall give warnings if the sensors register a dangerous value. Both the HQ and the Dismounted COP shall show the information selected by the user, according to the selected mode. 
+When an audio command is given from the the HQ, the Dismounted COP must play the audio command to the user. The HQ controls the connection to the Dismounted COP, meaning that the HQ chooses which Dismounted COP it will be connected to. 
 
 \section{User Interaction with System}
 
