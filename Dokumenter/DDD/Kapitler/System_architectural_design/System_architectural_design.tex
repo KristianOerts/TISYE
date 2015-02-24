@@ -1,6 +1,6 @@
 \chapter{System Architectural Design}
 \section{System Components}
-This chapter seeks to identify the system components. It provides a block definition diagram (bdd) of the system, where the system components are determined along with the static relationship between them. The block definition diagram is shown in figure \ref{fig:block_diagram}:
+This chapter seeks to identify the system components. It provides a block definition diagram (bdd) of the system, where the system components are determined along with the static relationship between them. A unique name has been assigned each block (with prefix SDD (System Design Description)), so that each system component can be mapped to the requirement from which it originates in the Requirements Traceability Matrix in section \ref{chap:req_trace}. The block definition diagram is shown in figure \ref{fig:block_diagram}:
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.95\textwidth]
@@ -11,15 +11,12 @@ This chapter seeks to identify the system components. It provides a block defini
 The diagram consists of system-blocks along with parts associated to each block. The system-blocks are depicted as two-compartment blocks with the name of the block in the first compartment, and sub parts in the second compartment. In the next section, a short description of each system-block is given.
 \subsection{Component description}
 \begin{enumerate}
-\item[•] \textbf{PC:} This block constitutes the machine in the head quarter (HQ) on which the COP-software will be executed. It also has a GPS module, so that the location of the HQ is always known. The PC has a telecommunication module, in order to be able to communicate with the rest of the system.
-\item[•] \textbf{Server:} The server will facilitate communication between the other blocks. In addition, it will store user information along with logs locally in an internal database.
-\item[•] \textbf{Dismounted COP:} This block constitutes the machine on which the condensed COP-software will be executed. The dismounted COP will be used by the dismounted users in the field. It has a GPS module, so that the location of the dismounted users is always known. Furthermore it has a telecommunication module so that it will be able to communicate with the rest of the system. 
+\item[•] \textbf{PC:} This block constitutes the machine in the head quarter (HQ) on which the COP-software will be executed. It is not within the scope of this project to develop the PC itself. However, there are parts required for the PC to enable it to interact with the rest of the system. These parts are specified in the block diagram. The PC has a GPS module, so that the location of the HQ is always known. The PC also has a telecommunication module, in order to be able to communicate with the rest of the system. Furthermore the PC has a touchscreen that lets the user navigate in the application through touch inputs. An audio interface is constituted of a microphone and a speaker.
+\item[•] \textbf{Server:} The server will facilitate communication between the other blocks. It has a telecommunication module, in order to be able to communicate with the rest of the system. In addition, it will store user information along with logs locally in an internal database.
+\item[•] \textbf{Dismounted COP:} This block constitutes the machine on which the condensed COP-software will be executed. The dismounted COP will be used by the dismounted users in the field. It has a GPS module, so that the location of the dismounted users is always known. Furthermore it has a telecommunication module so that it will be able to communicate with the rest of the system. Furthermore the dismounted COP has a touchscreen that lets the user navigate in the application through touch inputs. An audio interface is constituted of a microphone and a speaker. Lastly the dismounted COP has a radioation sensor, an oxygen sensor and a temperature sensor to enable detection of radiation-, oxygen-, and temperature-levels. 
 \end{enumerate}
 
-
-\section{Concept of Execution}
 \input{Kapitler/System_architectural_design/concept_of_execution.tex}
-
 
 \section{Interface Design}
 
@@ -43,7 +40,7 @@ This section seeks to describe the interface characteristics of the system compo
   Oxygen DC					&  Oxygen level signal to the dismounted COP				   & SIT2 & DC7 \\\hline
   GPS DC					&  GPS signal for the dismounted COP 	 					   & SIT3 & DC1 \\\hline   
   Temperature DC			&  Temperature signal to the dismounted COP 	 					   & SIT4 & DC2 \\\hline     
-  Audio in DC				&  Microphone for communication purposes 	 				   & SIT5 &\fxfatal{DC8  FIX PÅ DIAGRAM!!!!!}\\\hline     
+  Audio in DC				&  Microphone for communication purposes 	 				   & SIT5 &DC8\\\hline     
   Audio out DC				&  Speaker for communication purposes 	 					   & SIT6 & DC3 \\\hline     
   Display IO DC				&  Display input/output for dismounted COP 	 					   & SIT7 & DC5 \\\hline     
   
