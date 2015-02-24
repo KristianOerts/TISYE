@@ -196,13 +196,13 @@
 %}
 
 \makeatletter							% Title
-\newcommand*{\frontpagetitle}[5]{{\centering
+\newcommand*{\frontpagetitle}[4]{{\centering
 	\normalsize \textsc{#1} 	% Subtitle of the document
 		 	\\[2.0cm]													% 2cm spacing
 			\HRule{0.5pt} \\										% Upper rule
 			\Huge \textbf{\textlabel{#2}{doc:this}} \\	% Title
 			\HRule{2pt} \\ [0.2cm]								% Lower rule + 0.5cm spacing
-			\normalsize #3 \\  #4	\\ #5					\\
+			\normalsize #3 \\  #4	\\					% Todays date
 			}
 }
 \makeatother							
