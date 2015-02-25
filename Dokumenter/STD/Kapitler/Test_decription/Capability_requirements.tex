@@ -1,5 +1,26 @@
 % Capability requirements
 \section{Capability Requirements}
-\textbf{ST-0110} The test confirms that the system is capable of keeping track of the location of all devices.
 
-\textbf{ST-0110} Deploy X users to different locations, and confirm that the system shows the correct location of X users.
+\fxnote{Tilføj beskrivelse af devices., precondition server on, }
+\begin{description}
+
+\item\textbf{ST-0105} Deploy X users to different known locations, and confirm that the system shows the correct location of X users. \\
+\item\textbf{ST-0110} Send COP-information to all deployed devices and verify the information on the COP. \\
+\item\textbf{ST-0115} Start the devices, and verify that the COP contains information about human population density. \\
+\item\textbf{ST-0120} Start the devices, and verify that the COP contains typographic information. \\
+\item\textbf{ST-0125} Start the devices, and verify that the COP contains traffic information. \\
+\item\textbf{ST-0130} Start the devices, and verify that the COP contains infrastructure information. \\
+\item\textbf{ST-0135} Start the devices, and verify that the COP contains freshwater locations for firefighting purposes. \\
+\item\textbf{ST-0140} Register an event on a device. Verify the event on another device. \\
+\item\textbf{ST-0145} Start a device and verify that it contains weather information. \\
+\item\textbf{ST-0150} Start a device which is running the COP, verify that the information can be filtered using the GUI. \\
+\item\textbf{ST-0155} Start a device and verify that previous events can be viewed. \\
+\item\textbf{ST-0160} Register an event from each type of platform currently employed by various users. \\
+\item\textbf{ST-0165} Start a device and verify that information can be sent to each type of platform currently employed by various users. \\
+\item\textbf{ST-0170} Send a message to a specific geographical location, and confirm that only devices in this location receives the message. \\
+\item\textbf{ST-0175} Send a message to a specific device role, and confirm that only devices with this role receives the message. \\
+\item\textbf{ST-0180} Send a message to a specific device group, and confirm that only devices in this group receives the information.\\
+\item\textbf{ST-0185} Send a message to a specific device identity, and confirm that only devices with this identity receives the information. \\
+
+\end{description}
+
