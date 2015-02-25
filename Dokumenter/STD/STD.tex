@@ -1,0 +1,40 @@
+\input{../preamble/preamble_ida12}				% Preamble indlaeses
+\raggedbottom									% Soerger for at LaTeX ikke "straekker" teksten
+
+
+\begin{document}									% Starter dokumentet - obligatorisk
+\frontmatter										% Forindhold - nummereres med romertal
+
+
+\cleardoublepage	% Indsaetter tom side, saa naeste kapitel starter paa hoejre side (hvis noedvendigt)
+
+\include{Kapitler/Pre_ToC/pre_ToC}
+\cleardoublepage
+
+%Revision history and glossary comes before table of contents
+\include{Kapitler/frontpage/frontpage}
+\include{Kapitler/revision/revision}
+\include{Kapitler/glossary/glossary}
+
+
+%%%% Indholdsfortegnelse (TOC) %%%%
+\phantomsection									% Kunstigt afsnit, som hyperlinks kan 'holde fast i'
+\pdfbookmark[0]{Indholdsfortegnelse}{indhold}	% Tildeler en klikbar bookmark til den endelige PDF
+\tableofcontents*								% Indholdsfortegnelsen (kaldet ToC) 
+
+
+\mainmatter										% Hovedindhold - nummereres fra side 1
+
+\include{Kapitler/Introduction/Introduktion}
+\include{Kapitler/Test_decription/Test_decription}
+\include{Kapitler/Requirements_traceability/Requirements_traceability}
+\include{Kapitler/referenced_documents/referenced_documents}
+
+
+%%%% Fixme-listen %%%%
+%\newpage										% Ny side til Fixme-listen
+%\listoffixmes									% Fixme-listen - fjernes til sidst i projektet med "%"
+
+
+
+\end{document}									% Slutter dokumentet - obligatorisk
