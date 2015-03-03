@@ -1,9 +1,15 @@
 % Security_requirements
 \section{Security Requirements}
-
+\textbf{Precondition}
+\begin{itemize}
+  \item[•] The server must be initialized and online.
+  \item[•] Test program capable of monitoring an internet connection.
+\end{itemize}
+~\
 
 \begin{description}
 \item[ST-0610] Initialize the HQ COP and visually confirm that the COP prompts the user to login. Repeat this test for the dismounted COP.
-\item[ST-0620] Dispatch an order from the HQ COP and monitor the connection between the HQ COP and the server, and verify that the data is encrypted. Repeat this test for the dismounted COP. 
+\item[ST-0620] Dispatch an order from the HQ COP and monitor the connection between the HQ COP and the server via the test program. Verify that the data is encrypted. 
+\item[ST-0625] Dispatch an order from the dismounted COP and monitor the connection between the dismounted COP and the server via the test program. Verify that the data is encrypted. 
 \item[ST-0630] Perform test ST-0620 and verify that the information about the order is encrypted in the database.
 \end{description}

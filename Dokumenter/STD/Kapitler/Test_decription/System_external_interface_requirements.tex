@@ -1,9 +1,15 @@
 % System_external_interface_requirements
 \section{System External Interface Requirements}
+\textbf{Preconditions}
+\begin{itemize}
+  \item[•] The server must be initialized and online.
+  \item[•] A test program to be executed on the HQ COP that confirms the connection to the server by pinging it and allowing the user to monitor the connection.
+  \item[•] A test program to be executed on the Dismounted COP that confirms the connection to the server by pinging it and allowing the user to monitor the connection.
+\end{itemize}
+~\
+
 
 \begin{description}
-  \item[ST-0210] Confirm that the HQ COP and the dismounted COP provides an interface, that enables the user to interact with the system via touch inputs.
-  \item[ST-0220] Visually confirm that the HQ COP and the dismounted COP provides a GUI. 
-  \item[ST-0230] Confirm that the HQ COP and the dismounted COP provides an interface, that enables the user to interact with the system via audio inputs.
-  \item[ST-0240] Confirm the connection from the server to the HQ COP by initializing the HQ COP, and confirming that static and dynamic information is downloaded from 					 the server and displayed in the HQ COP GUI. Confirm the connection from the HQ COP to the server by dispatching an order from the HQ COP and confirming 				 the reception of the order on an initialized dismounted COP. Repeat this test for the dismounted COP.
+  \item[ST-0240] Run the test program on an HQ COP device and verify the connection, by monitoring it for one minute.
+  \item[ST-0245] Run the test program on an Dismounted COP device and verify the connection, by monitoring it for one minute.
 \end{description}
