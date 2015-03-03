@@ -1,6 +1,20 @@
 % Non-functional_requirements
 \section{Non-functional Requirements}
 
+\textbf{Preconditions}
+\begin{itemize}
+\item Timer
+\item Test program that puts the system in an error state
+\item Weight
+\item Temperature cabinet capable of going from -50°C to 80°C in steps of $0.1\frac{^{\circ}C}{min}$
+\item Radiation cabinet capable of going from $0.20 Sievert$ to $0.30 Sievert$ in steps of $0.01\frac{Sievert}{min}$
+\item Oxygen cabinet capable of going from $60 \%$ to $80 \%$ in steps of $0.1\frac{\%}{min}$
+\item BERT equipment
+\item The server must be turned on and ready to communicate with the devices
+\item Internet connection must be available for all devices in the system
+\end{itemize}
+~\
+
 \begin{description}
 \item[ST-1110] Turn on the system and start a timer. When the system is ready to respond to user input stop the timer. Verify that the time passed is less than 5 minutes.
 
@@ -14,18 +28,18 @@
 
 \item[ST-1160]Register information from a device to the system and start a timer. When the registered information is available on the other devices stop the timer. Verify that the time passed is less than 15 seconds. 
 
-\item[ST-1170]Post weather information from the system to a device and start a timer. When the information is available on the device stop the timer. Verify that the time passed is less than 10 seconds. 
+\item[ST-1170] Post weather information from the system to a device and start a timer. When the information is available on the device stop the timer. Verify that the time passed is less than 10 seconds. 
 
-\item[ST-1180] Expose the dismounted COP to 0.20 Sievert and increase the radiation up to 0.30 Sievert in steps of 0.01 Sievert. Confirm that the dismounted COP warns the user about dangerous radiation levels via the GUI and the audio interface when the measured radiation level exceeds 0.25 Sievert. 
+\item[ST-1180] Place the dismounted COP in the radiaton cabinet and expose it to $0.20 Sievert$ and increase the radiation up to $0.30 Sievert$ in steps of $0.01\frac{Sievert}{min}$. Confirm that the dismounted COP warns the user about dangerous radiation levels via the GUI and the audio interface when the measured radiation level exceeds $0.25 Sievert$. 
 
-\item[ST-1190] Expose the dismounted COP to -30°C and decrease the temperature down to -50°C in steps of 0.1°C. Confirm that the dismounted COP warns the user about dangerous temperature levels via the GUI and the audio interface when the measured temperature is below -40°C.\\
-Expose the dismounted COP to 60°C and increase the temperature up to 80°C in steps of 0.1°C. Confirm that the dismounted COP warns the user about dangerous temperature levels via the GUI and the audio interface when the measured temperature is above 70°C. 
+\item[ST-1190] Place the dismounted COP in the temperature cabinet and expose it to $-30^{\circ}C$ and decrease the temperature down to $-50^{\circ}C$ in steps of $0.1\frac{^{\circ}C}{min}$. Confirm that the dismounted COP warns the user about dangerous temperature levels via the GUI and the audio interface when the measured temperature is below $-40^{\circ}C$.\\
+Place the dismounted COP in the temperature cabinet and expose it to $60^{\circ}C$ and increase the temperature up to $80^{\circ}C$ in steps of $0.1\frac{^{\circ}C}{min}$. Confirm that the dismounted COP warns the user about dangerous temperature levels via the GUI and the audio interface when the measured temperature is above $70^{\circ}C$. 
 
-\item[ST-1200] Expose the dismounted COP to an oxygen level of 5\%. Increase the oxygen level up to 15\% in steps of 0.1\%. Confirm that the dismounted COP warns the user about dangerous oxygen levels via the GUI and the audio interface when the measured oxygen level is above 10\%. 
+\item[ST-1200] Place the dismounted COP in the oxygen cabinet and expose it to an oxygen level of $5\%$. Increase the oxygen level up to $15\%$ in steps of $0.1\frac{\%}{min}$. Confirm that the dismounted COP warns the user about dangerous oxygen levels via the GUI and the audio interface when the measured oxygen level is above $10\%$. 
 
 \item[ST-1210] Perform a bit error rate test (BERT) of the data communication and verify that it has a bit error rate (BER) of $10^{-3}$ or less. 
 
-\item[ST-1220] Weigh the hand-held dismounted COP. Verify that the weight does not exceed 1kg. 
+\item[ST-1220] Weigh the hand-held dismounted COP. Verify that the weight does not exceed $1kg$. 
 
 \end{description}
 
